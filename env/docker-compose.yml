@@ -1,0 +1,21 @@
+services:
+  fastai-lab:
+    build: .
+    image: fastai-course-v25
+    container_name: fastai-container
+    ports:
+      - "8888:8888"
+    volumes:
+      # Mappa la cartella corrente dentro il container
+      - .:/home/fastuser/project
+    # Configurazione Risorse GPU (Richiede NVIDIA Container Toolkit su WSL2)
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu]
+    # Aumenta la memoria condivisa (essenziale per i DataLoader di PyTorch)
+    shm_size: '8gb'
+    restart: unless-stopped
