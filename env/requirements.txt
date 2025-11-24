@@ -5,7 +5,6 @@ numpy>=1.26.4,<2.0
 # --- Jupyter Stack ---
 jupyterlab>=4.0,<5.0
 ipywidgets>=8.0,<9.0
-jupyter-contrib-nbextensions
 
 # --- Data Science Core ---
 scipy>=1.11.0,<1.14
@@ -27,6 +26,14 @@ accelerate>=0.21.0
 # --- NLP & Others ---
 spacy
 sentencepiece
-duckduckgo-search
 gradio
+
+# --- Kaggle & Web Search ---
+# AGGIORNAMENTO CRITICO: duckduckgo-search ha cambiato API
+# Versione più recente usa: from duckduckgo_search import DDGS
+duckduckgo-search>=6.0.0
+fastkaggle>=0.0.8
+kaggle
+
+# --- Visualization ---
 graphviz

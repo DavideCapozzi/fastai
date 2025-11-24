@@ -1,0 +1,165 @@
+[+] Running 3/3
+ ✔ fastai-course-v25           Built                                                                                            0.0s
+ ✔ Network env_default         Created                                                                                          0.1s
+ ✔ Container fastai-container  Created                                                                                          1.3s
+Attaching to fastai-container
+fastai-container  | [I 2025-11-23 20:30:37.799 ServerApp] jupyter_lsp | extension was successfully linked.
+fastai-container  | [I 2025-11-23 20:30:37.802 ServerApp] jupyter_server_terminals | extension was successfully linked.
+fastai-container  | [W 2025-11-23 20:30:37.803 LabApp] 'token' has moved from NotebookApp to ServerApp. This config will be passed to ServerApp. Be sure to update your config before our next release.
+fastai-container  | [W 2025-11-23 20:30:37.805 ServerApp] ServerApp.token config is deprecated in 2.0. Use IdentityProvider.token.
+fastai-container  | [I 2025-11-23 20:30:37.806 ServerApp] jupyterlab | extension was successfully linked.
+fastai-container  | [I 2025-11-23 20:30:37.809 ServerApp] Writing Jupyter server cookie secret to /home/fastuser/.local/share/jupyter/runtime/jupyter_cookie_secret
+fastai-container  | [I 2025-11-23 20:30:38.113 ServerApp] notebook_shim | extension was successfully linked.
+fastai-container  | [W 2025-11-23 20:30:38.126 ServerApp] All authentication is disabled.  Anyone who can connect to this server will be able to run code.
+fastai-container  | [I 2025-11-23 20:30:38.127 ServerApp] notebook_shim | extension was successfully loaded.
+fastai-container  | [I 2025-11-23 20:30:38.128 ServerApp] jupyter_lsp | extension was successfully loaded.
+fastai-container  | [I 2025-11-23 20:30:38.129 ServerApp] jupyter_server_terminals | extension was successfully loaded.
+fastai-container  | [I 2025-11-23 20:30:38.131 LabApp] JupyterLab extension loaded from /usr/local/lib/python3.11/site-packages/jupyterlab
+fastai-container  | [I 2025-11-23 20:30:38.131 LabApp] JupyterLab application directory is /usr/local/share/jupyter/lab
+fastai-container  | [I 2025-11-23 20:30:38.132 LabApp] Extension Manager is 'pypi'.
+fastai-container  | [I 2025-11-23 20:30:38.169 ServerApp] jupyterlab | extension was successfully loaded.
+fastai-container  | [I 2025-11-23 20:30:38.170 ServerApp] Serving notebooks from local directory: /home/fastuser/project
+fastai-container  | [I 2025-11-23 20:30:38.170 ServerApp] Jupyter Server 2.17.0 is running at:
+fastai-container  | [I 2025-11-23 20:30:38.170 ServerApp] http://db97fad272f6:8888/lab
+fastai-container  | [I 2025-11-23 20:30:38.170 ServerApp]     http://127.0.0.1:8888/lab
+fastai-container  | [I 2025-11-23 20:30:38.170 ServerApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+fastai-container  | [I 2025-11-23 20:30:38.188 ServerApp] Skipped non-installed server(s): basedpyright, bash-language-server, dockerfile-language-server-nodejs, javascript-typescript-langserver, jedi-language-server, julia-language-server, pyrefly, pyright, python-language-server, python-lsp-server, r-languageserver, sql-language-server, texlab, typescript-language-server, unified-language-server, vscode-css-languageserver-bin, vscode-html-languageserver-bin, vscode-json-languageserver-bin, yaml-language-server
+fastai-container  | [W 2025-11-23 20:30:52.866 ServerApp] Clearing invalid/expired login cookie username-localhost-8888
+fastai-container  | [W 2025-11-23 20:30:52.867 ServerApp] 404 GET /api/kernels/856e9bab-e8f7-4d9a-bbb6-6ef26eff4e1b?1763929852581 (172.18.0.1): Kernel does not exist: 856e9bab-e8f7-4d9a-bbb6-6ef26eff4e1b
+fastai-container  | [W 2025-11-23 20:30:52.867 ServerApp] wrote error: 'Kernel does not exist: 856e9bab-e8f7-4d9a-bbb6-6ef26eff4e1b'
+fastai-container  |     Traceback (most recent call last):
+fastai-container  |       File "/usr/local/lib/python3.11/site-packages/tornado/web.py", line 1848, in _execute
+fastai-container  |         result = await result
+fastai-container  |                  ^^^^^^^^^^^^
+fastai-container  |       File "/usr/local/lib/python3.11/site-packages/jupyter_server/auth/decorator.py", line 73, in inner
+fastai-container  |         return await out
+fastai-container  |                ^^^^^^^^^
+fastai-container  |       File "/usr/local/lib/python3.11/site-packages/jupyter_server/services/kernels/handlers.py", line 75, in get
+fastai-container  |         model = await ensure_async(km.kernel_model(kernel_id))
+fastai-container  |                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^
+fastai-container  |       File "/usr/local/lib/python3.11/site-packages/jupyter_server/services/kernels/kernelmanager.py", line 513, in kernel_model
+fastai-container  |         self._check_kernel_id(kernel_id)
+fastai-container  |       File "/usr/local/lib/python3.11/site-packages/jupyter_server/services/kernels/kernelmanager.py", line 544, in _check_kernel_id
+fastai-container  |         raise web.HTTPError(404, "Kernel does not exist: %s" % kernel_id)
+fastai-container  |     tornado.web.HTTPError: HTTP 404: Not Found (Kernel does not exist: 856e9bab-e8f7-4d9a-bbb6-6ef26eff4e1b)
+fastai-container  | [W 2025-11-23 20:30:52.869 ServerApp] 404 GET /api/kernels/856e9bab-e8f7-4d9a-bbb6-6ef26eff4e1b?1763929852581 (ef3b05b2ecb74a438be4888a6fdfc34a@172.18.0.1) 3.10ms referer=http://localhost:8888/lab/tree/Dockerfile
+fastai-container  | [W 2025-11-23 20:30:53.903 ServerApp] 404 GET /api/kernels/856e9bab-e8f7-4d9a-bbb6-6ef26eff4e1b/channels?session_id=c0bde3e8-4835-457c-9421-9e423e728872 (172.18.0.1): Kernel does not exist: 856e9bab-e8f7-4d9a-bbb6-6ef26eff4e1b
+fastai-container  | [W 2025-11-23 20:30:53.912 ServerApp] 404 GET /api/kernels/856e9bab-e8f7-4d9a-bbb6-6ef26eff4e1b/channels?session_id=c0bde3e8-4835-457c-9421-9e423e728872 (ef3b05b2ecb74a438be4888a6fdfc34a@172.18.0.1) 10.14ms referer=None
+fastai-container  | [W 2025-11-23 20:30:53.915 ServerApp] 404 GET /api/kernels/856e9bab-e8f7-4d9a-bbb6-6ef26eff4e1b?1763929853599 (172.18.0.1): Kernel does not exist: 856e9bab-e8f7-4d9a-bbb6-6ef26eff4e1b
+fastai-container  | [W 2025-11-23 20:30:53.916 ServerApp] wrote error: 'Kernel does not exist: 856e9bab-e8f7-4d9a-bbb6-6ef26eff4e1b'
+fastai-container  |     Traceback (most recent call last):
+fastai-container  |       File "/usr/local/lib/python3.11/site-packages/tornado/web.py", line 1848, in _execute
+fastai-container  |         result = await result
+fastai-container  |                  ^^^^^^^^^^^^
+fastai-container  |       File "/usr/local/lib/python3.11/site-packages/jupyter_server/auth/decorator.py", line 73, in inner
+fastai-container  |         return await out
+fastai-container  |                ^^^^^^^^^
+fastai-container  |       File "/usr/local/lib/python3.11/site-packages/jupyter_server/services/kernels/handlers.py", line 75, in get
+fastai-container  |         model = await ensure_async(km.kernel_model(kernel_id))
+fastai-container  |                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^
+fastai-container  |       File "/usr/local/lib/python3.11/site-packages/jupyter_server/services/kernels/kernelmanager.py", line 513, in kernel_model
+fastai-container  |         self._check_kernel_id(kernel_id)
+fastai-container  |       File "/usr/local/lib/python3.11/site-packages/jupyter_server/services/kernels/kernelmanager.py", line 544, in _check_kernel_id
+fastai-container  |         raise web.HTTPError(404, "Kernel does not exist: %s" % kernel_id)
+fastai-container  |     tornado.web.HTTPError: HTTP 404: Not Found (Kernel does not exist: 856e9bab-e8f7-4d9a-bbb6-6ef26eff4e1b)
+fastai-container  | [W 2025-11-23 20:30:53.916 ServerApp] 404 GET /api/kernels/856e9bab-e8f7-4d9a-bbb6-6ef26eff4e1b?1763929853599 (ef3b05b2ecb74a438be4888a6fdfc34a@172.18.0.1) 1.15ms referer=http://localhost:8888/lab/tree/Dockerfile
+fastai-container  | [W 2025-11-23 20:30:54.937 ServerApp] 404 GET /api/kernels/856e9bab-e8f7-4d9a-bbb6-6ef26eff4e1b/channels?session_id=c0bde3e8-4835-457c-9421-9e423e728872 (172.18.0.1): Kernel does not exist: 856e9bab-e8f7-4d9a-bbb6-6ef26eff4e1b
+fastai-container  | [W 2025-11-23 20:30:54.937 ServerApp] 404 GET /api/kernels/856e9bab-e8f7-4d9a-bbb6-6ef26eff4e1b/channels?session_id=c0bde3e8-4835-457c-9421-9e423e728872 (ef3b05b2ecb74a438be4888a6fdfc34a@172.18.0.1) 0.98ms referer=None
+fastai-container  | [W 2025-11-23 20:30:54.941 ServerApp] 404 GET /api/kernels/856e9bab-e8f7-4d9a-bbb6-6ef26eff4e1b?1763929854591 (172.18.0.1): Kernel does not exist: 856e9bab-e8f7-4d9a-bbb6-6ef26eff4e1b
+fastai-container  | [W 2025-11-23 20:30:54.941 ServerApp] wrote error: 'Kernel does not exist: 856e9bab-e8f7-4d9a-bbb6-6ef26eff4e1b'
+fastai-container  |     Traceback (most recent call last):
+fastai-container  |       File "/usr/local/lib/python3.11/site-packages/tornado/web.py", line 1848, in _execute
+fastai-container  |         result = await result
+fastai-container  |                  ^^^^^^^^^^^^
+fastai-container  |       File "/usr/local/lib/python3.11/site-packages/jupyter_server/auth/decorator.py", line 73, in inner
+fastai-container  |         return await out
+fastai-container  |                ^^^^^^^^^
+fastai-container  |       File "/usr/local/lib/python3.11/site-packages/jupyter_server/services/kernels/handlers.py", line 75, in get
+fastai-container  |         model = await ensure_async(km.kernel_model(kernel_id))
+fastai-container  |                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^
+fastai-container  |       File "/usr/local/lib/python3.11/site-packages/jupyter_server/services/kernels/kernelmanager.py", line 513, in kernel_model
+fastai-container  |         self._check_kernel_id(kernel_id)
+fastai-container  |       File "/usr/local/lib/python3.11/site-packages/jupyter_server/services/kernels/kernelmanager.py", line 544, in _check_kernel_id
+fastai-container  |         raise web.HTTPError(404, "Kernel does not exist: %s" % kernel_id)
+fastai-container  |     tornado.web.HTTPError: HTTP 404: Not Found (Kernel does not exist: 856e9bab-e8f7-4d9a-bbb6-6ef26eff4e1b)
+fastai-container  | [W 2025-11-23 20:30:54.941 ServerApp] 404 GET /api/kernels/856e9bab-e8f7-4d9a-bbb6-6ef26eff4e1b?1763929854591 (ef3b05b2ecb74a438be4888a6fdfc34a@172.18.0.1) 1.40ms referer=http://localhost:8888/lab/tree/Dockerfile
+fastai-container  | [W 2025-11-23 20:30:59.073 ServerApp] 404 GET /api/kernels/856e9bab-e8f7-4d9a-bbb6-6ef26eff4e1b/channels?session_id=c0bde3e8-4835-457c-9421-9e423e728872 (172.18.0.1): Kernel does not exist: 856e9bab-e8f7-4d9a-bbb6-6ef26eff4e1b
+fastai-container  | [W 2025-11-23 20:30:59.074 ServerApp] 404 GET /api/kernels/856e9bab-e8f7-4d9a-bbb6-6ef26eff4e1b/channels?session_id=c0bde3e8-4835-457c-9421-9e423e728872 (ef3b05b2ecb74a438be4888a6fdfc34a@172.18.0.1) 1.05ms referer=None
+fastai-container  | [W 2025-11-23 20:30:59.077 ServerApp] 404 GET /api/kernels/856e9bab-e8f7-4d9a-bbb6-6ef26eff4e1b?1763929859585 (172.18.0.1): Kernel does not exist: 856e9bab-e8f7-4d9a-bbb6-6ef26eff4e1b
+fastai-container  | [W 2025-11-23 20:30:59.077 ServerApp] wrote error: 'Kernel does not exist: 856e9bab-e8f7-4d9a-bbb6-6ef26eff4e1b'
+fastai-container  |     Traceback (most recent call last):
+fastai-container  |       File "/usr/local/lib/python3.11/site-packages/tornado/web.py", line 1848, in _execute
+fastai-container  |         result = await result
+fastai-container  |                  ^^^^^^^^^^^^
+fastai-container  |       File "/usr/local/lib/python3.11/site-packages/jupyter_server/auth/decorator.py", line 73, in inner
+fastai-container  |         return await out
+fastai-container  |                ^^^^^^^^^
+fastai-container  |       File "/usr/local/lib/python3.11/site-packages/jupyter_server/services/kernels/handlers.py", line 75, in get
+fastai-container  |         model = await ensure_async(km.kernel_model(kernel_id))
+fastai-container  |                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^
+fastai-container  |       File "/usr/local/lib/python3.11/site-packages/jupyter_server/services/kernels/kernelmanager.py", line 513, in kernel_model
+fastai-container  |         self._check_kernel_id(kernel_id)
+fastai-container  |       File "/usr/local/lib/python3.11/site-packages/jupyter_server/services/kernels/kernelmanager.py", line 544, in _check_kernel_id
+fastai-container  |         raise web.HTTPError(404, "Kernel does not exist: %s" % kernel_id)
+fastai-container  |     tornado.web.HTTPError: HTTP 404: Not Found (Kernel does not exist: 856e9bab-e8f7-4d9a-bbb6-6ef26eff4e1b)
+fastai-container  | [W 2025-11-23 20:30:59.078 ServerApp] 404 GET /api/kernels/856e9bab-e8f7-4d9a-bbb6-6ef26eff4e1b?1763929859585 (ef3b05b2ecb74a438be4888a6fdfc34a@172.18.0.1) 1.47ms referer=http://localhost:8888/lab/tree/Dockerfile
+fastai-container  | [W 2025-11-23 20:31:12.519 ServerApp] 404 GET /api/kernels/856e9bab-e8f7-4d9a-bbb6-6ef26eff4e1b/channels?session_id=c0bde3e8-4835-457c-9421-9e423e728872 (172.18.0.1): Kernel does not exist: 856e9bab-e8f7-4d9a-bbb6-6ef26eff4e1b
+fastai-container  | [W 2025-11-23 20:31:12.520 ServerApp] 404 GET /api/kernels/856e9bab-e8f7-4d9a-bbb6-6ef26eff4e1b/channels?session_id=c0bde3e8-4835-457c-9421-9e423e728872 (ef3b05b2ecb74a438be4888a6fdfc34a@172.18.0.1) 1.32ms referer=None
+fastai-container  | [W 2025-11-23 20:31:12.523 ServerApp] 404 GET /api/kernels/856e9bab-e8f7-4d9a-bbb6-6ef26eff4e1b?1763929872599 (172.18.0.1): Kernel does not exist: 856e9bab-e8f7-4d9a-bbb6-6ef26eff4e1b
+fastai-container  | [W 2025-11-23 20:31:12.524 ServerApp] wrote error: 'Kernel does not exist: 856e9bab-e8f7-4d9a-bbb6-6ef26eff4e1b'
+fastai-container  |     Traceback (most recent call last):
+fastai-container  |       File "/usr/local/lib/python3.11/site-packages/tornado/web.py", line 1848, in _execute
+fastai-container  |         result = await result
+fastai-container  |                  ^^^^^^^^^^^^
+fastai-container  |       File "/usr/local/lib/python3.11/site-packages/jupyter_server/auth/decorator.py", line 73, in inner
+fastai-container  |         return await out
+fastai-container  |                ^^^^^^^^^
+fastai-container  |       File "/usr/local/lib/python3.11/site-packages/jupyter_server/services/kernels/handlers.py", line 75, in get
+fastai-container  |         model = await ensure_async(km.kernel_model(kernel_id))
+fastai-container  |                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^
+fastai-container  |       File "/usr/local/lib/python3.11/site-packages/jupyter_server/services/kernels/kernelmanager.py", line 513, in kernel_model
+fastai-container  |         self._check_kernel_id(kernel_id)
+fastai-container  |       File "/usr/local/lib/python3.11/site-packages/jupyter_server/services/kernels/kernelmanager.py", line 544, in _check_kernel_id
+fastai-container  |         raise web.HTTPError(404, "Kernel does not exist: %s" % kernel_id)
+fastai-container  |     tornado.web.HTTPError: HTTP 404: Not Found (Kernel does not exist: 856e9bab-e8f7-4d9a-bbb6-6ef26eff4e1b)
+fastai-container  | [W 2025-11-23 20:31:12.524 ServerApp] 404 GET /api/kernels/856e9bab-e8f7-4d9a-bbb6-6ef26eff4e1b?1763929872599 (ef3b05b2ecb74a438be4888a6fdfc34a@172.18.0.1) 1.35ms referer=http://localhost:8888/lab/tree/Dockerfile
+fastai-container  | [W 2025-11-23 20:31:36.343 ServerApp] 404 GET /api/kernels/856e9bab-e8f7-4d9a-bbb6-6ef26eff4e1b/channels?session_id=c0bde3e8-4835-457c-9421-9e423e728872 (172.18.0.1): Kernel does not exist: 856e9bab-e8f7-4d9a-bbb6-6ef26eff4e1b
+fastai-container  | [W 2025-11-23 20:31:36.344 ServerApp] 404 GET /api/kernels/856e9bab-e8f7-4d9a-bbb6-6ef26eff4e1b/channels?session_id=c0bde3e8-4835-457c-9421-9e423e728872 (ef3b05b2ecb74a438be4888a6fdfc34a@172.18.0.1) 0.95ms referer=None
+fastai-container  | [W 2025-11-23 20:31:36.350 ServerApp] 404 GET /api/kernels/856e9bab-e8f7-4d9a-bbb6-6ef26eff4e1b?1763929896587 (172.18.0.1): Kernel does not exist: 856e9bab-e8f7-4d9a-bbb6-6ef26eff4e1b
+fastai-container  | [W 2025-11-23 20:31:36.350 ServerApp] wrote error: 'Kernel does not exist: 856e9bab-e8f7-4d9a-bbb6-6ef26eff4e1b'
+fastai-container  |     Traceback (most recent call last):
+fastai-container  |       File "/usr/local/lib/python3.11/site-packages/tornado/web.py", line 1848, in _execute
+fastai-container  |         result = await result
+fastai-container  |                  ^^^^^^^^^^^^
+fastai-container  |       File "/usr/local/lib/python3.11/site-packages/jupyter_server/auth/decorator.py", line 73, in inner
+fastai-container  |         return await out
+fastai-container  |                ^^^^^^^^^
+fastai-container  |       File "/usr/local/lib/python3.11/site-packages/jupyter_server/services/kernels/handlers.py", line 75, in get
+fastai-container  |         model = await ensure_async(km.kernel_model(kernel_id))
+fastai-container  |                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^
+fastai-container  |       File "/usr/local/lib/python3.11/site-packages/jupyter_server/services/kernels/kernelmanager.py", line 513, in kernel_model
+fastai-container  |         self._check_kernel_id(kernel_id)
+fastai-container  |       File "/usr/local/lib/python3.11/site-packages/jupyter_server/services/kernels/kernelmanager.py", line 544, in _check_kernel_id
+fastai-container  |         raise web.HTTPError(404, "Kernel does not exist: %s" % kernel_id)
+fastai-container  |     tornado.web.HTTPError: HTTP 404: Not Found (Kernel does not exist: 856e9bab-e8f7-4d9a-bbb6-6ef26eff4e1b)
+fastai-container  | [W 2025-11-23 20:31:36.350 ServerApp] 404 GET /api/kernels/856e9bab-e8f7-4d9a-bbb6-6ef26eff4e1b?1763929896587 (ef3b05b2ecb74a438be4888a6fdfc34a@172.18.0.1) 1.15ms referer=http://localhost:8888/lab/tree/Dockerfile
+fastai-container  | [W 2025-11-23 20:31:41.511 ServerApp] 404 GET /api/kernels/856e9bab-e8f7-4d9a-bbb6-6ef26eff4e1b/channels?session_id=c0bde3e8-4835-457c-9421-9e423e728872 (172.18.0.1): Kernel does not exist: 856e9bab-e8f7-4d9a-bbb6-6ef26eff4e1b
+fastai-container  | [W 2025-11-23 20:31:41.512 ServerApp] 404 GET /api/kernels/856e9bab-e8f7-4d9a-bbb6-6ef26eff4e1b/channels?session_id=c0bde3e8-4835-457c-9421-9e423e728872 (ef3b05b2ecb74a438be4888a6fdfc34a@172.18.0.1) 1.53ms referer=None
+fastai-container  | [W 2025-11-23 20:31:41.516 ServerApp] 404 GET /api/kernels/856e9bab-e8f7-4d9a-bbb6-6ef26eff4e1b?1763929901590 (172.18.0.1): Kernel does not exist: 856e9bab-e8f7-4d9a-bbb6-6ef26eff4e1b
+fastai-container  | [W 2025-11-23 20:31:41.516 ServerApp] wrote error: 'Kernel does not exist: 856e9bab-e8f7-4d9a-bbb6-6ef26eff4e1b'
+fastai-container  |     Traceback (most recent call last):
+fastai-container  |       File "/usr/local/lib/python3.11/site-packages/tornado/web.py", line 1848, in _execute
+fastai-container  |         result = await result
+fastai-container  |                  ^^^^^^^^^^^^
+fastai-container  |       File "/usr/local/lib/python3.11/site-packages/jupyter_server/auth/decorator.py", line 73, in inner
+fastai-container  |         return await out
+fastai-container  |                ^^^^^^^^^
+fastai-container  |       File "/usr/local/lib/python3.11/site-packages/jupyter_server/services/kernels/handlers.py", line 75, in get
+fastai-container  |         model = await ensure_async(km.kernel_model(kernel_id))
+fastai-container  |                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^
+fastai-container  |       File "/usr/local/lib/python3.11/site-packages/jupyter_server/services/kernels/kernelmanager.py", line 513, in kernel_model
+fastai-container  |         self._check_kernel_id(kernel_id)
+fastai-container  |       File "/usr/local/lib/python3.11/site-packages/jupyter_server/services/kernels/kernelmanager.py", line 544, in _check_kernel_id
+fastai-container  |         raise web.HTTPError(404, "Kernel does not exist: %s" % kernel_id)
+fastai-container  |     tornado.web.HTTPError: HTTP 404: Not Found (Kernel does not exist: 856e9bab-e8f7-4d9a-bbb6-6ef26eff4e1b)
+fastai-container  | [W 2025-11-23 20:31:41.517 ServerApp] 404 GET /api/kernels/856e9bab-e8f7-4d9a-bbb6-6ef26eff4e1b?1763929901590 (ef3b05b2ecb74a438be4888a6fdfc34a@172.18.0.1) 1.51ms referer=http://localhost:8888/lab/tree/Dockerfile
