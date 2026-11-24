@@ -4,7 +4,7 @@
         [--label baseline] [--cell-timeout 900] [--total-timeout 3600] [--continue-on-error]
 
 What it does, on a copy (the source notebook is never modified):
-  1. Comments out `!pip` / `%pip` / `!conda` lines, so upstream install cells cannot
+  1. Replaces `!pip` / `%pip` / `!conda` lines with `pass  # skipped`, so upstream install cells cannot
      change the env. They are listed in the report.
   2. Applies patches from a TOML file (minimal fixes, each tied to a course-compat entry):
          [[patch]]
@@ -76,7 +76,7 @@ def strip_installs(nb) -> list[dict]:
             continue
         for m in INSTALL_RE.finditer(c.source):
             skipped.append({"cell": i, "line": m.group(2).strip()})
-        c.source = INSTALL_RE.sub(r"\1# [run_notebook] skipped: \2", c.source)
+        c.source = INSTALL_RE.sub(r"\1pass  # [run_notebook] skipped: \2", c.source)
     return skipped
 
 

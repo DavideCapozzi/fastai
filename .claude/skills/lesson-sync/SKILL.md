@@ -118,3 +118,8 @@ python scripts/scaffold_lesson.py --part <P> --lesson <N> --slug <kebab-title> -
   an auth banner when they are missing; `fetch_upstream.py` then exits with a clear message.
 - The GitHub API path for `resolve` uses `gh`. Without it, unauthenticated requests are limited to
   60 per hour.
+- Pilot 2026-11-24: skipped `!pip` lines are replaced by `pass`, since commenting them broke
+  `if iskaggle:` blocks. The executed notebook has one extra injected cell, so its cell numbers
+  are shifted by 1 vs the source; use `--code-only` there. `nb_cells.py` does not show HTML
+  outputs (the `fine_tune` table); read them with nbformat. Kaggle copies may have no stored
+  outputs; compare against the course22 copy instead.

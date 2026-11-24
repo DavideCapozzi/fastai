@@ -4,3 +4,56 @@
 # updated official source for the lesson; the choice is explained in docs/course-compat.md.
 # version: full commit SHA (github) or notebook version number (kaggle).
 # updated: date of the last upstream change to this file. fetched: date downloaded.
+
+[[source]]
+lesson   = "P1-L01"
+kind     = "kaggle"
+ref      = "jhoward/is-it-a-bird-creating-a-model-from-your-own-data"
+version  = "10"
+updated  = "2026-11-21"
+fetched  = "2026-11-24"
+baseline = true
+url      = "https://www.kaggle.com/code/jhoward/is-it-a-bird-creating-a-model-from-your-own-data"
+
+[[source]]
+lesson   = "P1-L01"
+kind     = "github"
+ref      = "fastai/course22"
+path     = "00-is-it-a-bird-creating-a-model-from-your-own-data.ipynb"
+version  = "230390584ba5b990e20487d68681a9ec5b258eff"
+updated  = "2024-10-08"
+fetched  = "2026-11-24"
+baseline = false
+url      = "https://github.com/fastai/course22/blob/230390584ba5b990e20487d68681a9ec5b258eff/00-is-it-a-bird-creating-a-model-from-your-own-data.ipynb"
+
+[[source]]
+lesson   = "P1-L01"
+kind     = "github"
+ref      = "fastai/course22"
+path     = "01-jupyter-notebook-101.ipynb"
+version  = "7cd9ba10271bc46884b509af1ff5f585be2e73b3"
+updated  = "2023-02-06"
+fetched  = "2026-11-24"
+baseline = false
+url      = "https://github.com/fastai/course22/blob/7cd9ba10271bc46884b509af1ff5f585be2e73b3/01-jupyter-notebook-101.ipynb"
+
+[[source]]
+lesson   = "P1-L01"
+kind     = "github"
+ref      = "fastai/fastbook"
+path     = "01_intro.ipynb"
+version  = "5701d615d4e3a0ca4c4a0656decd02dd019f04fb"
+updated  = "2024-06-08"
+fetched  = "2026-11-24"
+baseline = false
+url      = "https://github.com/fastai/fastbook/blob/5701d615d4e3a0ca4c4a0656decd02dd019f04fb/01_intro.ipynb"
+
+[[source]]
+lesson   = "P1-L01"
+kind     = "kaggle"
+ref      = "jhoward/jupyter-notebook-101"
+version  = "3"
+updated  = "2026-11-21"
+fetched  = "2026-11-24"
+baseline = false
+url      = "https://www.kaggle.com/code/jhoward/jupyter-notebook-101"

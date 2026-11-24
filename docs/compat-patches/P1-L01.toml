@@ -1,0 +1,9 @@
+[[patch]]
+id  = "P1-L01-ddgs"
+old = "from duckduckgo_search import DDGS"
+new = "from ddgs import DDGS"
+
+[[patch]]
+id  = "P1-L01-ddgs-cap"
+old = "download_images(dest, urls=search_images(f'{o} photo'))"
+new = "download_images(dest, urls=[u for q in ('photo','photos','picture','image') for u in search_images(f'{o} {q}')])"
