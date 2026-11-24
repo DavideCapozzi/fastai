@@ -1,0 +1,6 @@
+# Upstream course material, fetched into upstream/ (gitignored, never committed).
+# Maintained by scripts/fetch_upstream.py and the /lesson-sync skill.
+# One [[source]] per (lesson, file, version). `baseline = true` marks the most recently
+# updated official source for the lesson; the choice is explained in docs/course-compat.md.
+# version: full commit SHA (github) or notebook version number (kaggle).
+# updated: date of the last upstream change to this file. fetched: date downloaded.

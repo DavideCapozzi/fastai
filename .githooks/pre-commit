@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+# Keep jupytext pairs (.ipynb <-> py:percent) in sync before every commit.
+# Enabled per clone with:  git config core.hooksPath .githooks
+# Only touches course/ and projects/. A .py is synced only if its .ipynb sibling exists,
+# so plain Python modules are never turned into notebooks.
+set -euo pipefail
+
+JUPYTEXT="${HOME}/micromamba/envs/fastai-course/bin/jupytext"
+[ -x "$JUPYTEXT" ] || JUPYTEXT="micromamba run -n fastai-course jupytext"
+
+mapfile -t staged < <(git diff --cached --name-only --diff-filter=ACM -- 'course/*' 'projects/*' \
+  | grep -E '\.(ipynb|py)$' || true)
+[ ${#staged[@]} -eq 0 ] && exit 0
+
+for f in "${staged[@]}"; do
+  base="${f%.*}"
+  if [[ "$f" == *.py ]] && [ ! -f "$base.ipynb" ]; then continue; fi
+  $JUPYTEXT --sync --quiet "$f"
+  git add -- "$base.ipynb" "$base.py"
+done

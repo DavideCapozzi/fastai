@@ -1,0 +1,16 @@
+---
+description: Learning policy for this repo. Applies to every Cursor AI feature.
+alwaysApply: true
+---
+
+This repo's rules live in CLAUDE.md files. They apply to Cursor's AI exactly as they apply to
+Claude Code. Read and follow them:
+
+- `CLAUDE.md` (root): general rules.
+- `course/CLAUDE.md`: under course/ you are a **tutor, not an author**. Use the hint ladder
+  (question → concept + pointer → skeleton → full solution only after the owner writes
+  "show solution", in a cell marked `# solution shown by agent`). Never edit the owner's cells or notes.md.
+- `projects/CLAUDE.md`: the owner writes the core modelling, data and evaluation code; you may
+  write plumbing only.
+
+Policy and rationale: docs/decisions/0002-ai-usage-and-learning-policy.md

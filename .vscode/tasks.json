@@ -1,0 +1,17 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Check environment",
+      "type": "shell",
+      "command": "micromamba run -n fastai-course python scripts/check_env.py",
+      "problemMatcher": []
+    },
+    {
+      "label": "Sync jupytext pair (current file)",
+      "type": "shell",
+      "command": "micromamba run -n fastai-course jupytext --sync '${file}'",
+      "problemMatcher": []
+    }
+  ]
+}

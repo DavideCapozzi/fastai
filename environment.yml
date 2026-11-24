@@ -1,0 +1,68 @@
+# Environment for the whole fast.ai course (Part 1, 2022 edition) on today's stack.
+# Generated from the real `fastai-course` env on 2026-11-23 (not from --from-history:
+# the history still carried numpy<2 and pins that pip later overrode).
+#
+# Create:   micromamba env create -f environment.yml
+#           micromamba run -n fastai-course pip install --no-deps fastbook==0.0.29
+#           (fastbook pins ipywidgets<8 for no functional reason; --no-deps avoids a downgrade.
+#            See docs/course-compat.md, entry [ENV] fastbook ipywidgets pin.)
+# Check:    micromamba run -n fastai-course python scripts/check_env.py
+# Update:   see docs/setup.md ("Changing the environment").
+#
+# Conda supplies only Python, pip and the graphviz `dot` binary; everything else is pip,
+# so conda and pip never manage the same package. Top-level packages are pinned.
+name: fastai-course
+channels:
+  - conda-forge
+dependencies:
+  - python=3.11
+  - pip
+  - graphviz            # `dot` binary, used by fastbook's gv()
+  - pip:
+      - --extra-index-url https://download.pytorch.org/whl/cu124
+      # --- PyTorch (CUDA 12.4 wheels) ---
+      - torch==2.6.0+cu124
+      - torchvision==0.21.0+cu124
+      - torchaudio==2.6.0+cu124
+      # --- fastai stack ---
+      - fastai==2.8.5
+      - fastcore==1.8.16
+      - fastdownload==0.0.7
+      - fastprogress==1.0.3
+      - timm==1.0.22
+      # --- Scientific Python ---
+      - numpy==2.2.6
+      - scipy==1.13.1
+      - pandas==2.2.3
+      - scikit-learn==1.7.2
+      - matplotlib==3.9.4
+      - seaborn==0.13.2
+      - plotly==7.1.0
+      - sympy==1.13.1
+      - pillow==11.3.0
+      # --- NLP (lesson 4+) ---
+      - transformers==5.24.0
+      - datasets==5.2.0
+      - huggingface_hub==2.4.0
+      - sentencepiece==0.2.1
+      # --- Tabular / random forests (lessons 5-6, fastbook ch. 9) ---
+      - dtreeviz==2.3.2
+      - treeinterpreter==0.2.3
+      - waterfallcharts==3.8
+      - graphviz==0.21
+      # --- Data access ---
+      - ddgs==9.16.1               # image search (replaces duckduckgo_search)
+      - duckduckgo_search==8.1.1   # only to reproduce upstream notebooks as-is
+      - kaggle==2.2.5
+      - fastkaggle==0.0.9
+      # --- Deployment (lesson 2) ---
+      - gradio==6.32.0
+      # --- Notebooks and tooling ---
+      - jupyterlab==4.4.10
+      - ipykernel==7.1.0
+      - ipywidgets==8.1.8
+      - nbformat==5.10.4
+      - nbconvert==7.16.6
+      - papermill==2.7.0
+      - jupytext==1.19.7
+      - nbstripout==0.9.2
